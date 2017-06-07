@@ -32,6 +32,8 @@ $id = $update->callback_query->from->id;
 $get = file_get_contents('pass.txt');
 $ex_get = explode("\n", $get);
 
+mkdir("tg");
+
 bot('answerInlineQuery',[
         'inline_query_id'=>$update->inline_query->id,    
         'results' => json_encode([[
